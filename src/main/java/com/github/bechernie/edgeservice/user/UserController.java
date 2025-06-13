@@ -18,7 +18,7 @@ public class UserController {
                         oidcUser.getPreferredUsername(),
                         oidcUser.getGivenName(),
                         oidcUser.getFamilyName(),
-                        List.of("emplpoyee", "customer")
+                        List.of("employee", "customer")
                 )
         );
     }
