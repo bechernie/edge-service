@@ -20,6 +20,7 @@ repositories {
 ext {
     set('springCloudVersion', "2025.0.0")
     set('testcontainersVersion', "1.17.3")
+    set("otelVersion", "1.33.3")
 }
 
 dependencies {
@@ -36,6 +37,7 @@ dependencies {
     testImplementation 'org.testcontainers:junit-jupiter'
     runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
     runtimeOnly 'io.github.resilience4j:resilience4j-micrometer'
+    runtimeOnly "io.opentelemetry.javaagent:opentelemetry-javaagent:${otelVersion}"
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
