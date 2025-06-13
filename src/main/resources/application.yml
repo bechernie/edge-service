@@ -112,3 +112,8 @@ management:
       show-components: always
       probes:
         enabled: true
+      group:
+        readiness:
+          include:
+            - readinessState
+            - redis
