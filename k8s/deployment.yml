@@ -37,6 +37,9 @@ spec:
               value: http://order-service
             - name: SPA_URL
               value: http://polar-ui
+          volumeMounts:
+            - mountPath: /workspace/config
+              name: edge-service-volume
           livenessProbe:
             httpGet:
               path: /actuator/health/liveness
@@ -49,3 +52,7 @@ spec:
               port: 9000
             initialDelaySeconds: 60
             periodSeconds: 15
+      volumes:
+        - name: edge-service-volume
+          configMap:
+            name: edge-service
